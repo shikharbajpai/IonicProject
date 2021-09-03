@@ -1,0 +1,19 @@
+<ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-back-button></ion-back-button>
+  </ion-buttons>
+  <ion-title>{{ 'TABS.filter' | translate}}</ion-title>
+  <ion-buttons slot="end">
+    <ion-button (click)="done()">{{ 'BUTTONS.done' | translate}}</ion-button>
+  </ion-buttons>
+</ion-toolbar>
+
+<ion-content>
+  <ion-item>
+    <ion-label>Expertise</ion-label>
+    <ion-select [(ngModel)]="expertiseSelected" multiple="true">
+      <!-- <ion-select-option *ngFor="let e of expertiseData">{{e.expertise}}</ion-select-option> -->
+      <ion-select-option *ngFor="let e of doctorExpertises">{{e}}</ion-select-option>
+    </ion-select>
+  </ion-item>
+</ion-content>

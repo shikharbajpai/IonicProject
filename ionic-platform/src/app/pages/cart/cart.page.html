@@ -1,0 +1,108 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="tabs/tab3"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ 'TABS.cart' | translate}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="show">
+  <div *ngFor="let cart of addCartArray">
+    <ion-item color="light">
+      <ion-avatar slot="start">
+        <img [src]=cart.medimage>
+      </ion-avatar>
+      <ion-label>
+        <h2>{{cart.medname}}</h2>
+        <p style="color: #e93b81;"><a (click)="onRemove(cart)">{{ 'BUTTONS.remove' | translate}}</a></p>
+      </ion-label>
+      <!-- <button (click)="decreaseProductCount()" clear ion-button small color="dark">
+        -
+      </button>
+      <button ion-button small clear color="dark">
+        {{productCount}}
+      </button>
+      <button (click)="incrementProductCount()" clear ion-button small color="dark">
+        +
+      </button> -->
+      <ion-chip color="secondary">
+        <ion-label>{{cart.medprice | currency:'INR'}}</ion-label>
+      </ion-chip>
+    </ion-item>
+  </div>
+  <ion-card style="margin-top: 150px;">
+    <ion-item>
+      <!-- <ion-icon name="pin" slot="start"></ion-icon> -->
+      <ion-label>{{ 'PRICEDETAIL.heading' | translate}}</ion-label>
+      <!-- <ion-button fill="outline" slot="end">payment</ion-button> -->
+    </ion-item>
+
+    <ion-card-content>
+      <!-- Price  -->
+      <ion-row>
+        <ion-col>
+          <ion-text>{{ 'PRICEDETAIL.price' | translate}}</ion-text>
+        </ion-col>
+        <ion-col style="text-align: right;">
+          <ion-text>{{totalPrice | currency:'INR'}}</ion-text>
+        </ion-col>
+      </ion-row>
+      <!-- Discount  -->
+      <ion-row>
+        <ion-col>
+          <ion-text>{{ 'PRICEDETAIL.discount' | translate}}</ion-text>
+        </ion-col>
+        <ion-col style="text-align: right;">
+          <ion-text style="color: lightseagreen;">- {{discountAmount | number:'1.2-2' | currency:'INR'}}</ion-text>
+        </ion-col>
+      </ion-row>
+      <!-- Delivery Charges  -->
+      <ion-row>
+        <ion-col>
+          <ion-text>{{ 'PRICEDETAIL.deliverycharges' | translate}}</ion-text>
+        </ion-col>
+        <ion-col style="text-align: right;">
+          <ion-text style="color: lightseagreen">FREE</ion-text>
+        </ion-col>
+      </ion-row>
+      <hr class="lineDotted">
+      <!-- Total Amount  -->
+      <ion-row>
+        <ion-col>
+          <ion-text>{{ 'PRICEDETAIL.totalamount' | translate}}</ion-text>
+        </ion-col>
+        <ion-col style="text-align: right;">
+          <ion-text>{{totalAmount | currency:'INR'}}</ion-text>
+        </ion-col>
+      </ion-row>
+      <hr class="lineDashed">
+      <!-- Discount you get in words -->
+      <ion-row>
+        <ion-col>
+          <ion-text style="color: lightseagreen; letter-spacing: 1px;">{{ 'PRICEDETAIL.description1' | translate}}
+            {{discountAmount
+            | number:'1.2-2' | currency:'INR'}} {{ 'PRICEDETAIL.description2' | translate}}</ion-text>
+        </ion-col>
+      </ion-row>
+
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
+
+<ion-footer class="ion-no-border" *ngIf="show">
+  <div class="buttons">
+    <button ion-button class="cartButton">{{ 'BUTTONS.proceedtocheckout' | translate}} <ion-icon name="arrow-forward">
+      </ion-icon></button>
+  </div>
+</ion-footer>
+
+<ion-content class=emptyCart *ngIf="!show">
+  <img src="../../assets/images/emptyCart.jpg" alt="Empty Cart">
+  <h4>Your Cart is empty!</h4>
+  <p>Buy Medicines at lowest cost and save upto 20%.</p>
+  <div class="buttons">
+    <button ion-button class="cartButton" routerLink="/tabs/tab3">Shop now</button>
+  </div>
+</ion-content>

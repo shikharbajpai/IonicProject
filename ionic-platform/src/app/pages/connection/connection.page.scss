@@ -1,0 +1,20 @@
+.buttons {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  // color: #134bacbd;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.signInButton {
+  border-radius: 40px;
+  height: 40px;
+  color: #ffffff;
+  background-color: lightseagreen;
+  margin-top: 0px;
+  width: 40%;
+  font-size: 15px;
+}

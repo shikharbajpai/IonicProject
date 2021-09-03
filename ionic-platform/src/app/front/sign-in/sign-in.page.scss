@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+ion-content.background {
+  --background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(../../../assets/images/background.jpg) no-repeat center center/cover;
+}
+
+.design img {
+  width: 30%;
+  display: flex;
+  margin: 25px auto;
+  height: 80px;
+}
+
+// .design img {
+//   width: 35%;
+//   display: flex;
+//   margin: 25px auto;
+// }
+
+.textDesign {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.textDesign h4 {
+  color: #134bacbd;
+  // font-weight: bold;
+  font-family: "Roboto", sans-serif;
+}
+
+.textDesign p {
+  // color: gray;
+  color: #ffffff;
+  margin-top: -5px;
+}
+
+.formDesign {
+  letter-spacing: 1px;
+  margin-top: 10px;
+  border-radius: 40px;
+}
+
+.submit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.submitButton {
+  border-radius: 40px;
+  height: 37px;
+  margin-top: 20px;
+  color: #ffffff;
+  background-color: transparent;
+  border: 2px solid lightseagreen;
+  font-size: 15px;
+}
+
+.submitButton:hover {
+  background-color: lightseagreen;
+  color: #ffffff;
+}
+
+.submit p {
+  text-align: center;
+  // color: #6fd9cd;
+  // color: lightseagreen;
+  color: #ffffff;
+  text-decoration: underline;
+  margin-top: 25px;
+}

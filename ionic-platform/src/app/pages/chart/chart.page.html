@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>chart</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Vertical Bar Chart</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <!-- <ngx-charts-bar-vertical [view]="[1000,400]" [results]="saleData" [xAxisLabel]="'Products'"
+        [legendTitle]="'Product Sale Chart'" [yAxisLabel]="'Sale'" [legend]="true" [showXAxisLabel]="true"
+        [showYAxisLabel]="true" [xAxis]="true" [yAxis]="true" [gradient]="true">
+      </ngx-charts-bar-vertical> -->
+
+      <ngx-charts-bar-vertical [view]="[1000,400]" [results]="saleData" [scheme]="colorScheme"
+        [legendTitle]="legendTitle" [gradient]="gradient" [xAxis]="showXAxis" [yAxis]="showYAxis" [legend]="showLegend"
+        [showXAxisLabel]="showXAxisLabel" [showYAxisLabel]="showYAxisLabel" [xAxisLabel]="xAxisLabel"
+        [yAxisLabel]="yAxisLabel" [xAxis]="xAxis" [yAxis]="yAxis" (select)="onSelect($event)">
+      </ngx-charts-bar-vertical>
+
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Pie Chart</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ngx-charts-pie-chart [results]="saleData" [legend]="true" [legendTitle]="'Product Sale Report'"
+        [view]="[1000,300]" [labels]="true">
+      </ngx-charts-pie-chart>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Advanced Pie Chart</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ngx-charts-advanced-pie-chart [results]="saleData" [gradient]="true">
+      </ngx-charts-advanced-pie-chart>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Pie Grid Chart</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ngx-charts-pie-grid [results]="saleData">
+      </ngx-charts-pie-grid>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

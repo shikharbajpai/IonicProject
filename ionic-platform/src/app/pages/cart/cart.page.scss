@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+ion-toolbar {
+  // --ion-background-color: #18ffb230;
+  --ion-background-color: #6fd9cd;
+}
+
+.emptyCart img {
+  width: 35%;
+  display: flex;
+  margin: 25px auto;
+}
+
+.emptyCart h4 {
+  // color: #134bacbd;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.emptyCart p {
+  text-align: center;
+  letter-spacing: 1px;
+  font-family: "Roboto", sans-serif;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.cartButton {
+  border-radius: 40px;
+  height: 40px;
+  color: #ffffff;
+  background-color: lightseagreen;
+  margin-top: 0px;
+  width: 85%;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+}
+
+.lineDotted {
+  border-top: 1px dashed rgb(29, 28, 28);
+  // border-top: 1px dashed black;
+  margin: 2px;
+}
+
+.lineDashed {
+  border-top: 1px solid rgb(29, 28, 28);
+  // border-top: 1px dashed black;
+  margin: 2px;
+}

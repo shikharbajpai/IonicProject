@@ -1,0 +1,36 @@
+<ion-content class="background">
+  <div class="ion-padding">
+    <div class="textDesign">
+      <h4>Fill the Details</h4>
+      <p>OTP will be sent to the registered number</p>
+      <p>All Fields are mandatory</p>
+    </div>
+    <ion-row>
+      <ion-col class="design">
+        <img src="../../../assets/images/Well Being5.jpg" alt="Well Being">
+      </ion-col>
+    </ion-row>
+    <form #signInForm="ngForm" (ngSubmit)="onSignIn()" style="margin-top: 50px;">
+      <ion-item class="formDesign">
+        <ion-input type="text" placeholder="Name" name="firstName" #firstName="ngModel" [(ngModel)]="model.firstName"
+          required="true">
+        </ion-input>
+      </ion-item>
+      <ion-item class="formDesign">
+        <ion-input type="number" placeholder="Mobile Number" name="mobileNumber" #mobileNumber="ngModel"
+          [(ngModel)]="model.mobileNumber" required="true">
+        </ion-input>
+      </ion-item>
+      <ion-item class="formDesign">
+        <ion-input type="text" placeholder="Enter Password" name="password" #password="ngModel"
+          [(ngModel)]="model.password" required="true">
+        </ion-input>
+      </ion-item>
+
+      <div class="submit">
+        <button ion-button type="submit" class="submitButton">Continue</button>
+        <p routerLink="/front">Login Using another Method</p>
+      </div>
+    </form>
+  </div>
+</ion-content>

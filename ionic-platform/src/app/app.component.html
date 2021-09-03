@@ -1,0 +1,87 @@
+<ion-app>
+  <ion-split-pane contentId="menu-content">
+    <ion-menu contentId="menu-content" [disabled]="!show">
+      <ion-content>
+        <div class="menu-header-bg"></div>
+
+        <ion-menu-toggle>
+          <div class="header-content">
+            <ion-icon name="person-circle-outline" class="icon"></ion-icon>
+            <ion-label>
+              <h2>{{profile}}</h2>
+            </ion-label>
+          </div>
+        </ion-menu-toggle>
+
+        <ion-list>
+
+          <ion-menu-toggle>
+            <ion-item routerLink="/tabs/tab1">
+              <ion-icon name="people" slot="start"></ion-icon>
+              <ion-label> {{ 'TABS.consultants' | translate}} </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-menu-toggle>
+            <ion-item routerLink="/tabs/remedies">
+              <ion-icon name="rose" slot="start"></ion-icon>
+              <ion-label>{{ 'TABS.remedy' | translate}}</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-menu-toggle>
+            <ion-item routerLink="/tabs/tab3">
+              <ion-icon name="medkit" slot="start"></ion-icon>
+              <ion-label>{{ 'TABS.medicines' | translate}}</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-menu-toggle>
+            <ion-item routerLink="/tabs/cart">
+              <ion-icon name="cart" slot="start"></ion-icon>
+              <ion-label>{{ 'TABS.mycart' | translate}}</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-menu-toggle>
+            <ion-item routerLink="/tabs/settings">
+              <ion-icon name="settings-outline" slot="start"></ion-icon>
+              <ion-label>{{ 'TABS.settings' | translate}}</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-menu-toggle>
+            <ion-item routerLink="/tabs/chart">
+              <i class="fas fa-chart-bar" slot="start"></i>
+              <!-- <ion-icon name="settings-outline" slot="start"></ion-icon> -->
+              <ion-label>Charts</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-menu-toggle>
+            <ion-item routerLink="/tabs/apexchart">
+              <i class="fas fa-chart-line" slot="start"></i>
+              <ion-label>Apex Charts</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-menu-toggle>
+            <ion-item routerLink="/tabs/d3chart">
+              <i class="fas fa-chart-pie" slot="start"></i>
+              <ion-label>D3 Charts</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+          <ion-menu-toggle>
+            <ion-item (click)="logout()">
+              <ion-icon name="log-out" slot="start"></ion-icon>
+              <ion-label>{{ 'TABS.logout' | translate}}</ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet id="menu-content"></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>

@@ -1,0 +1,117 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="openMenu()">
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>{{ 'TABS.consultants' | translate}} </ion-title>
+    <ion-buttons slot="primary">
+      <!-- <ion-button (click)="refreshData()">
+        <ion-icon slot="icon-only" name="refresh"></ion-icon>
+      </ion-button> -->
+      <ion-button (click)="sortData()">
+        <ion-icon slot="icon-only" name="swap-vertical"></ion-icon>
+      </ion-button>
+      <ion-button (click)="openFilter()">
+        <ion-icon slot="icon-only" name="filter"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="show">
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <ion-list>
+    <div class="contentDesign">
+      <ion-row style=" margin-left: 100px;">
+        <ion-col>
+          <h2>{{'HEADING.content' | translate}}</h2>
+        </ion-col>
+        <ion-col>
+          <img style="height: 100px ;width: 100px;margin-top: 50px;" src="../../assets/images/Consultants Image.jpeg">
+        </ion-col>
+      </ion-row>
+    </div>
+    <ion-searchbar animated showCancelButton="focus" [(ngModel)]="searchDoctors"></ion-searchbar>
+    <div class="list-container" *ngFor="let list of consultant | filter: searchDoctors">
+      <ion-item>
+        <ion-avatar slot="start">
+          <img [src]=list.image>
+        </ion-avatar>
+        <ion-label button (click)="doctorsDetail(list)">
+          <h2>{{list.firstName}} {{list.lastName}}</h2>
+          <h3>{{list.expertise}}</h3>
+          <p>{{list.schedule}}</p>
+        </ion-label>
+      </ion-item>
+    </div>
+  </ion-list>
+</ion-content>
+
+<!-- Skeleton screen -->
+<div *ngIf="!show">
+  <div class="ion-padding custom-skeleton">
+    <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+    <ion-skeleton-text animated></ion-skeleton-text>
+    <ion-skeleton-text animated style="width: 88%"></ion-skeleton-text>
+    <ion-skeleton-text animated style="width: 70%"></ion-skeleton-text>
+    <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+  </div>
+
+  <ion-list>
+    <ion-list-header>
+      <ion-label>
+        <ion-skeleton-text animated style="width: 20%"></ion-skeleton-text>
+      </ion-label>
+    </ion-list-header>
+    <ion-item>
+      <ion-avatar slot="start">
+        <ion-skeleton-text animated></ion-skeleton-text>
+      </ion-avatar>
+      <ion-label>
+        <h3>
+          <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+        </h3>
+        <p>
+          <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+        </p>
+        <p>
+          <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+        </p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <ion-skeleton-text animated></ion-skeleton-text>
+      </ion-thumbnail>
+      <ion-label>
+        <h3>
+          <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+        </h3>
+        <p>
+          <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+        </p>
+        <p>
+          <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+        </p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-skeleton-text animated style="width: 27px; height: 27px" slot="start"></ion-skeleton-text>
+      <ion-label>
+        <h3>
+          <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+        </h3>
+        <p>
+          <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+        </p>
+        <p>
+          <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+        </p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</div>

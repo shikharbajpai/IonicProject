@@ -1,0 +1,125 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{ 'TABS.admin' | translate}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background">
+  <div class="ion-padding">
+    <div class="textDesign">
+      <h4>Fill the Details to add/remove a consultant</h4>
+      <p>All Fields are mandatory</p>
+    </div>
+    <form #addConsultantsForm="ngForm" *ngIf="show">
+      <ion-row>
+        <ion-col>
+          <ion-item class="formDesign">
+            <ion-input type="text" placeholder="First Name" name="firstName" #firstName="ngModel"
+              [(ngModel)]="model.firstName" required="true">
+            </ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item class="formDesign">
+            <ion-input type="text" placeholder="Last Name" name="lastName" #lastName="ngModel"
+              [(ngModel)]="model.lastName" required="true">
+            </ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item class="formDesign">
+            <ion-input type="text" placeholder="Expertise" name="expertise" #expertise="ngModel"
+              [(ngModel)]="model.expertise" required="true">
+            </ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item class="formDesign">
+            <ion-input type="number" placeholder="Mobile Number" name="contact" #contact="ngModel"
+              [(ngModel)]="model.contact" required="true">
+            </ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item class="formDesign">
+            <ion-input type="text" placeholder="Experience" name="experience" #experience="ngModel"
+              [(ngModel)]="model.experience" required="true">
+            </ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item class="formDesign">
+            <ion-input type="text" placeholder="Schedule" name="schedule" #schedule="ngModel"
+              [(ngModel)]="model.schedule" required="true">
+            </ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item class="formDesign">
+            <!-- <ion-range min="0" max="5" step="1" snaps="true" ticks="false" name="rating" #rating="ngModel"
+              [(ngModel)]="model.rating" required="true">
+            </ion-range> -->
+            <ion-input type="number" placeholder="Rating" name="rating" #rating="ngModel" [(ngModel)]="model.rating"
+              required="true">
+            </ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item class="formDesign">
+            <ion-input type="text" placeholder="Description" name="description" #description="ngModel"
+              [(ngModel)]="model.description" required="true">
+            </ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <!-- <ion-row>
+        <ion-col>
+          <button ion-button class="submitButton" type="file" accept="image/*" name="image" #image="ngModel"
+            [(ngModel)]="model.image" [id]="image" required="true">Upload an image</button>
+        </ion-col>
+      </ion-row> -->
+      <ion-row style="margin-top: 5px;">
+        <ion-input type="file" accept="image/*" name="image" #image="ngModel" [(ngModel)]="model.image" [id]="image">
+        </ion-input>
+      </ion-row>
+      <ion-row>
+        <ion-col size="6">
+          <!-- <ion-fab vertical="bottom" horizontal="center" slot="fixed"> -->
+          <ion-button (click)="addPhotoToGallery()">
+            <ion-icon name="camera"></ion-icon>
+          </ion-button>
+          <!-- </ion-fab> -->
+        </ion-col>
+        <!-- <ion-col size="6" *ngFor="let photo of photoService.photos; index as position">
+          <ion-img [src]="photo.webviewPath"></ion-img>
+        </ion-col> -->
+        <ion-col size="6">
+          <ion-img [src]="showImage"></ion-img>
+        </ion-col>
+      </ion-row>
+
+      <div class="submit">
+        <button ion-button class="submitButton" (click)="onSubmit()">Continue</button>
+        <p (click)="show=false">Remove a Consultant</p>
+      </div>
+    </form>
+  </div>
+  <form #removeConsultantForm="ngForm" (ngSubmit)="onRemove()" *ngIf="!show">
+    <ion-item class="formDesign">
+      <ion-input type="number" placeholder="Consultant Id Number" name="id" #id="ngModel" [(ngModel)]="model.id"
+        required="true">
+      </ion-input>
+    </ion-item>
+
+    <div class="submit">
+      <button ion-button type="submit" class="submitButton">Remove</button>
+      <p (click)="show=true">Add a Consultant</p>
+    </div>
+  </form>
+</ion-content>

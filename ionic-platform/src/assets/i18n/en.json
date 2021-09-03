@@ -1,0 +1,68 @@
+{
+  "TABS": {
+    "consultants": "Consultants",
+    "remedies": "Remedies - General Remedies that Benefits",
+    "remedy": "Remedies",
+    "medicines": "Medicines",
+    "cart": "Add to Cart",
+    "mycart": "My Cart",
+    "admin": "Administrator",
+    "settings": "Settings",
+    "filter": "Filter",
+    "logout": "Logout"
+    },
+
+  "HEADING": {
+    "content": "Get consult and medical help from the doctors"
+    },
+
+    "DOCTORDETAIL": {
+    "dr": "Dr.",
+    "heading": "Personal Information",
+    "specialized": "Specialized",
+    "contantinfo": "Contact Information"
+    },
+
+    "REMEDIES": {
+    "heading": "General Remedies that Benefits",
+    "symptoms": "Symptoms",
+    "treatment": "Treatment"
+    },
+
+    "MEDICINEDETAIL": {
+    "heading": "Medicine Information",
+    "description": "Description"
+    },
+
+    "PRICEDETAIL": {
+    "heading": "Price Details",
+    "price": "Price",
+    "discount": "Discount",
+    "deliverycharges": "Delivery Charges",
+    "totalamount": "Total Amount",
+    "description1": "You will save",
+    "description2": "on this order"
+    },
+
+    "BUTTONS": {
+    "done": "Done",
+    "treatment": "Treatment",
+    "homeremedies": "Home Remedies",
+    "addtocart": "Add to Cart",
+    "remove": "Remove",
+    "proceedtocheckout": "Proceed to Checkout",
+    "okay": "Okay",
+    "cancel": "Cancel"
+    },
+
+    "ALERT": {
+    "msg":"Are you sure you want to logout of the app?"
+    },
+
+    "TOASTERS": {
+      "medicineaddedtocart": "Medicine added to cart",
+      "medicineremovedromcart": "Medicine removed successfully"
+
+    }
+}
+

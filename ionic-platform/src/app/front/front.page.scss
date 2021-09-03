@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+// ion-content.background {
+//   // --ion-background-color: rgb(150, 219, 216);
+//   --background: url(../../assets/images/background.jpg) no-repeat center
+//     center/cover;
+//   // --background: url(../../assets/images/background.jpg);
+//   // background-repeat: no-repeat;
+//   // background-size: cover;
+//   clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 0% 100%);
+// }
+
+ion-content.background {
+  --background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(../../assets/images/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+.design img {
+  width: 35%;
+  display: flex;
+  margin: 25px auto;
+}
+
+.design h4 {
+  // color: #134bacbd;
+  color: #ffffff;
+  // font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-top: 130px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  // color: #134bacbd;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.buttons h3 {
+  // font-weight: bold;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.buttons p {
+  margin-top: -10px;
+}
+
+.footer {
+  margin-top: 60px;
+}
+
+.signInButton {
+  border-radius: 40px;
+  height: 40px;
+  color: #ffffff;
+  background-color: lightseagreen;
+  margin-top: 0px;
+  width: 85%;
+  font-size: 15px;
+}
+
+.startAgain {
+  // color: #488aff;
+  color: #00fff1;
+  letter-spacing: 1px;
+}

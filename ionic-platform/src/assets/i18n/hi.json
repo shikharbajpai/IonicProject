@@ -1,0 +1,62 @@
+{
+  "TABS": {
+    "consultants": "सलाहकार",
+    "remedies": "उपचार - सामान्य उपचार जो लाभ देते हैं",
+    "remedy": "उपचार",
+    "medicines": "दवाइयाँ",
+    "cart": "कार्ट में डालें",
+    "mycart": "मेरी गाड़ी",
+    "admin": "प्रशासक",
+    "settings": "समायोजन",
+    "filter": "फ़िल्टर",
+    "logout": "लॉग आउट"
+   },
+
+  "HEADING":{
+    "content": "डॉक्टरों से परामर्श और चिकित्सा सहायता प्राप्त करें"
+  },
+
+  "DOCTORDETAIL": {
+    "dr": "डॉ",
+    "heading": "व्यक्तिगत जानकारी",
+    "specialized": "विशेषज्ञता विषय",
+    "contantinfo": "संपर्क करें"
+    },
+
+    "REMEDIES": {
+    "heading": "सामान्य उपचार जो लाभ करते हैं",
+    "symptoms": "लक्षण",
+    "treatment": "इलाज"
+    },
+
+    "MEDICINEDETAIL": {
+    "heading": "दवा की जानकारी",
+    "description": "विवरण"
+    },
+
+    "PRICEDETAIL": {
+    "heading": "मूल्य विवरण",
+    "price": "कीमत",
+    "discount": "छूट",
+    "deliverycharges": "वितरण शुल्क",
+    "totalamount": "कुल राशि",
+    "description1": "आप बचा लेंगे",
+    "description2": "इस उत्पाद पर"
+    },
+
+    "BUTTONS": {
+    "done": "ठीक है",
+    "treatment": "इलाज",
+    "homeremedies": "घरेलू उपचार",
+    "addtocart": "कार्ट में डालें",
+    "remove": "इसे हटा दें",
+    "proceedtocheckout": "चेक आउट करने के लिए आगे बढ़ें",
+    "okay": "ठीक हैं",
+    "cancel": "नहीं "
+    },
+
+    "ALERT": {
+    "msg":"क्या आप वाकई ऐप से लॉगआउट करना चाहते हैं?"
+    }
+}
+

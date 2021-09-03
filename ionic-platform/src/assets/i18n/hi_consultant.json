@@ -1,0 +1,79 @@
+{
+  "CONSULTANTS": [{
+
+  "id": 1,
+  "firstName": "Ashkan",
+  "lastName": "Forouzani",
+  "expertise": "हृदय रोग विशेषज्ञ",
+  "contact": 9854667342,
+  "rating": 4.8,
+  "schedule": "सुबह 10 बजे से दोपहर 2 बजे तक",
+  "experience": "10 साल से अधिक",
+ "description": "",
+  "image": "assets/doctors Images/Ashkan Forouzani.jpg"
+},
+{
+  "id": 2,
+  "firstName": "Austin",
+  "lastName": "Distel",
+  "expertise": "ऑन्कोलॉजिस्ट",
+  "contact": 9854667342,
+  "rating": 4.7,
+  "schedule": "दोपहर 2 बजे से शाम 5 बजे तक",
+  "experience": "20 साल से अधिक",
+ "description": "",
+  "image": "assets/doctors Images/Austin Distel.jpg"
+},
+{
+  "id": 3,
+  "firstName": "Bruno",
+  "lastName": "Rodrigues",
+  "expertise": "एंडोक्राइनोलॉजिस्ट",
+  "contact": 9854667342,
+  "rating": 4.7,
+  "schedule": "दोपहर 2 बजे से शाम 5 बजे तक",
+  "experience": "20 साल से अधिक",
+ "description": "",
+  "image": "assets/doctors Images/Bruno Rodrigues.jpg"
+},
+{
+  "id": 4,
+  "firstName": "Sammy",
+  "lastName": "Williams",
+  "expertise": "ऑन्कोलॉजिस्ट",
+  "contact": 9854667342,
+  "rating": 4.7,
+  "schedule": "दोपहर 2 बजे से शाम 5 बजे तक",
+  "experience": "20 साल से अधिक",
+ "description": "",
+  "image": "assets/doctors Images/Sammy Williams.jpg"
+},
+{
+  "id": 5,
+  "firstName": "Ani",
+  "lastName": "Kolleshi",
+  "expertise": "त्वचा विशेषज्ञ",
+  "contact": 9854667342,
+  "rating": 4.7,
+  "schedule": "दोपहर 2 बजे से शाम 5 बजे तक",
+  "experience": "20 साल से अधिक",
+ "description": "",
+  "image": "assets/doctors Images/Ani Kolleshi.jpg"
+},
+{
+  "id": 6,
+  "firstName": "Brian",
+  "lastName": "Mercado",
+  "expertise": "हृदय रोग विशेषज्ञ",
+  "contact": 9854667342,
+  "rating": 4.7,
+  "schedule": "दोपहर 2 बजे से शाम 5 बजे तक",
+  "experience": "20 साल से अधिक",
+ "description": "",
+  "image": "assets/doctors Images/Brian Mercado.jpg"
+}
+  ],
+  "HEADING":{
+    "content": "डॉक्टरों से परामर्श और चिकित्सा सहायता प्राप्त करें"
+  }
+}

@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title style="font-size: 15px;">{{ 'TABS.remedies' | translate}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <div class="buttons">
+    <button ion-button (click)="show=true" style="margin-right: 2.5px;">{{ 'BUTTONS.treatment' | translate}}</button>
+    <button ion-button (click)="show=false" style="margin-left: 2.5px;">{{ 'BUTTONS.homeremedies' | translate}}</button>
+  </div>
+  <div class="contain" *ngIf="show">
+    <h2>{{ 'REMEDIES.heading' | translate}}</h2>
+    <ion-card color="light" *ngFor="let remedy of remediesDetails">
+      <img [src]=remedy.image>
+      <ion-card-header>
+        <ion-card-title>{{remedy.diseaseName}}</ion-card-title>
+        <ion-card-subtitle>{{remedy.anotherName}}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-row>
+        <ion-col>
+          <ion-card-subtitle style="text-align: center;">{{ 'REMEDIES.symptoms' | translate}}</ion-card-subtitle>
+          <ion-card-content>{{remedy.symptoms}}</ion-card-content>
+        </ion-col>
+        <ion-col>
+          <ion-card-subtitle style="text-align: center;">{{ 'REMEDIES.treatment' | translate}}</ion-card-subtitle>
+          <ion-card-content>{{remedy.treatment}}</ion-card-content>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </div>
+  <div *ngIf="!show"></div>
+</ion-content>

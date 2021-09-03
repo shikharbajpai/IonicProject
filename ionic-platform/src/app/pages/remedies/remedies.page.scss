@@ -1,0 +1,28 @@
+.contain {
+  // background-color: lightgoldenrodyellow;
+  margin-top: -15px;
+}
+
+.contain h2 {
+  text-align: center;
+  font-size: 15px;
+}
+
+ion-toolbar {
+  --ion-background-color: #6fd9cd;
+}
+
+.buttons {
+  display: flex;
+  margin-top: 10px;
+}
+
+.buttons button {
+  border-radius: 8px;
+  height: 40px;
+  color: #ffffff;
+  background-color: #6fd9cd;
+  margin-top: 0px;
+  width: 70%;
+  font-size: 15px;
+}
